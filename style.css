@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: purple;
+	font-size: 24px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: bisque;
+	padding: 10vh;
+	text-align: center;
+}
+.container {
+	background-color: royalblue;
+	height: 400px;
+	width: 400px;
+	display: flex;
+	/* flex-direction: row | row-reverse | column | column-reverse; direccion del main-axis*/
+	flex-wrap: wrap; /*Indica si los elementos saltan de linea o no*/
+	justify-content: flex-start; /* Alineamiento en el main-axis */
+	/* align-items: center; Alinea elementos en el cross-axis cuando solo hay una linea de elementos */
+	align-content: flex-start; /*Alineamiento en el cross-axis cuando hay mas de una linea */
+}
+.item {
+	width: 30px;
+	height: 30px;
+	margin: 0.5em;
+	padding: 5px;
+	line-height: 30px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	width: 25px;
+	/* margin: auto; Centramos el elemento completamente */
+}
+.item:nth-child(2) {
+	background-color: burlywood;
+	flex-grow: 1;
+	/* flex: 0 1 auto; Valor por defecto
+			flex-grow | flex-shrink | flex-basis;
+
+	*/
+}
+.item:nth-child(3) {
+	background-color: cadetblue;
+	flex-grow: 2;
+}
+.item:nth-child(4) {
+	background-color: darkgreen;
+}
+.item:last-child {
+	background-color: coral;
+}
+
+.footer {
+	background-color: aquamarine;
+	padding: 5px;
+	text-align: center;
+	margin-top: auto;
+}
